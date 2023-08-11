@@ -51,23 +51,47 @@
     .feature-description {
       font-size: 18px;
     }
+    
+    /* 留言板样式 */
+    .message-board {
+      margin: 40px auto;
+      max-width: 600px;
+      padding: 20px;
+      background-color: #fff;
+    }
+    
+    .message-board h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    
+    .message-board label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    
+    .message-board input,
+    .message-board textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+    
+    .message-board input[type="submit"] {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
   </style>
-  <script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?ace5baec6cba0cda7b077de884847bad";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
+
 </head>
 <body>
   <div class="jumbotron">
     <h1>Welcome to Ended Ai</h1>
     <p>Experience the future with our cutting-edge technology</p>
   </div>
-<!-- 
+
   <div class="container">
     <div class="row">
       <div class="col-md-4">
@@ -93,7 +117,19 @@ var _hmt = _hmt || [];
       </div>
     </div>
   </div>
--->
+  
+  <!-- 留言板 -->
+  <div class="message-board">
+    <h2>留言板</h2>
+    <form action="save_message.php" method="post">
+      <label for="name">姓名：</label>
+      <input type="text" id="name" name="name" required><br><br>
+      <label for="message">留言：</label><br>
+      <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+      <input type="submit" value="提交留言">
+    </form>
+  </div>
+
   <script src="https://kit.fontawesome.com/xxxxxxxxxx.js" crossorigin="anonymous"></script>
 </body>
- </html>
+</html>

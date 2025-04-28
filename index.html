@@ -4,45 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>资源分享网站</title>
+    <!-- 优化后的 meta 描述标签 -->
+    <meta name="description" content="资源分享网站，提供安全、便捷的资源分享服务，涵盖各类资源，无广告干扰。">
+    <!-- 优化后的 meta 关键词标签 -->
+    <meta name="keywords" content="资源分享, 免费资源, 无广告资源, 资源下载">
+    <title>资源分享网站 - 免费、无广告的资源共享平台</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="bg-gray-100">
-    <header class="bg-blue-500 text-white p-4">
-        <h1 class="text-2xl font-bold text-center">资源分享网站</h1>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-6 shadow-lg">
+        <h1 class="text-3xl font-bold tracking-wide text-center">资源分享网站 - 免费、无广告的资源共享平台</h1>
     </header>
-    <main class="p-4">
-        <div class="search-container">
-            <div class="flex items-center">
-                <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                <input type="text" id="search-input" placeholder="搜索资源标题"
-                    class="border border-gray-300 p-2 w-full rounded-md focus:ring-blue-500 focus:border-blue-500">
+    <main class="p-8">
+        <div class="flex flex-col md:flex-row gap-8">
+            <div class="flex-1">
+                <div class="search-container bg-white p-6 rounded-xl shadow-xl">
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-magnifying-glass search-icon text-blue-500 text-2xl mr-4"></i>
+                        <input type="text" id="search-input" placeholder="搜索资源标题"
+                            class="border border-gray-300 p-3 w-full rounded-lg focus:ring-blue-500 focus:border-blue-500 transition duration-300 ease-in-out">
+                    </div>
+                    <button id="search-button"
+                        class="bg-blue-500 text-white p-3 rounded-lg hover:bg-blue-600 w-full mt-6 transition duration-300 ease-in-out">搜索</button>
+                    <div id="search-results" class="mt-6"></div>
+                </div>
+                <!-- 添加打赏二维码部分 -->
+                <div class="donate-container bg-white p-6 rounded-xl shadow-xl mt-8 md:mt-0">
+                    <h2 class="text-2xl font-bold text-center text-blue-600">打赏支持</h2>
+                    <p class="text-gray-600 text-center mt-2">如果您觉得本网站对您有帮助，欢迎打赏支持！</p>
+                    <!-- 为图片添加 alt 属性 -->
+                    <img src="https://picsum.photos/200/200" alt="打赏二维码" class="mx-auto mt-4 rounded-lg">
+                </div>
             </div>
-            <button id="search-button"
-                class="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 w-full mt-4">搜索</button>
-            <div id="search-results" class="mt-4"></div>
-        </div>
-        <!-- 添加网站干净无广告的介绍 -->
-        <div class="site-intro mt-8 text-center">
-            <p class="text-gray-700">本站为干净纯绿色，无广告，为您提供安全、便捷的资源分享服务。</p>
-        </div>
-        <!-- 添加打赏二维码部分 -->
-       <!--  <div class="donate-container mt-8 text-center">
-            <h2 class="text-xl font-bold">打赏支持</h2>
-            <p class="text-gray-600">如果您觉得本网站对您有帮助，欢迎打赏支持！</p>
-            <img src="https://picsum.photos/200/200" alt="打赏二维码" class="mx-auto mt-4 rounded-md">
-        </div> -->
-
-        <!-- 添加免责声明 -->
-        <div class="disclaimer-container mt-8 text-center">
-            <h2 class="text-xl font-bold">免责声明</h2>
-            <p class="text-gray-600">本网站所提供的资源均来源于网络，仅供学习和交流使用。若侵犯了您的权益，请及时联系我们，邮箱：<a href="mailto:example@example.com" class="email-link">example@example.com</a>，我们将立即处理。同时，使用本网站资源所产生的一切风险和责任由使用者自行承担。</p>
+            <div class="flex-1">
+                <!-- 添加网站干净无广告的介绍 -->
+                <div class="site-intro bg-white p-6 rounded-xl shadow-xl mt-8">
+                    <p class="text-gray-700 text-center">本站为干净纯绿色，无广告，为您提供安全、便捷的资源分享服务。</p>
+                </div>
+                <!-- 添加免责声明 -->
+                <div class="disclaimer-container bg-white p-6 rounded-xl shadow-xl mt-8">
+                    <h2 class="text-2xl font-bold text-center text-blue-600">免责声明</h2>
+                    <p class="text-gray-600 mt-2">本网站所提供的资源均来源于网络，仅供学习和交流使用。若侵犯了您的权益，请及时联系我们，邮箱：<a href="mailto:example@example.com" class="email-link text-blue-500 hover:text-blue-600 transition duration-300 ease-in-out">example@example.com</a>，我们将立即处理。同时，使用本网站资源所产生的一切风险和责任由使用者自行承担。</p>
+                </div>
+            </div>
         </div>
     </main>
-    <footer>
+    <footer class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-4 text-center">
         <p>版权所有 &copy; 2025 资源分享网站。保留所有权利。</p>
     </footer>
     <script>
@@ -80,10 +90,11 @@
                     const title = cursor.value.title.toLowerCase();
                     if (title.includes(searchTerm)) {
                         const resultItem = document.createElement('div');
-                        resultItem.classList.add('search-result-item');
+                        resultItem.classList.add('search-result-item', 'bg-white', 'p-4', 'rounded-lg', 'shadow-md', 'mt-4', 'transition', 'duration-300', 'ease-in-out', 'hover:shadow-lg', 'hover:scale-105');
                         const link = document.createElement('a');
                         link.href = cursor.value.downloadUrl;
                         link.textContent = cursor.value.title;
+                        link.classList.add('text-blue-500', 'hover:text-blue-600', 'font-semibold');
                         resultItem.appendChild(link);
                         resultsDiv.appendChild(resultItem);
                     }
